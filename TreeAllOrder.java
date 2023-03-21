@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-class test2 {
+class AllOrder {
     Node root;
     //Pre-order	
     public void PreeOrderRec(Node node) {
@@ -40,7 +40,7 @@ class test2 {
     }
 
     public static void main(String[] args) {
-        test2 tt = new test2();
+        AllOrder tt = new test2();
         tt.root = new Node(1);
         tt.root.left = new Node(2);
         tt.root.right = new Node(3);
