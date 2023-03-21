@@ -38,7 +38,31 @@ class AllOrder {
         PostOrderRec(node.right);
         System.out.print(node.data+" ");
     }
-
+    //LavelOrder
+    public void LavelOrder(Node node) {
+                    Queue<Node>queue=new LinkedList<>();
+                    queue.add(node);
+                    while(!queue.isEmpty()){
+                              Node currentNode=queue.poll();
+                              if(currentNode==null){
+                                        if(queue.isEmpty()){
+                                                  return;
+                                        }
+                                        else{
+                                                  queue.add(null);
+                                        }
+                              }
+                              else{
+                                        System.out.print(currentNode.data+" ");
+                                        if(currentNode.left!=null){
+                                                  queue.add(currentNode.left);
+                                        }
+                                        if(currentNode.right!=null){
+                                                  queue.add(currentNode.right);
+                                        }
+                              }
+                    }
+          }
     public static void main(String[] args) {
         AllOrder tt = new test2();
         tt.root = new Node(1);
