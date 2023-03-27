@@ -42,6 +42,7 @@ class AllOrder {
     public void LavelOrder(Node node) {
                     Queue<Node>queue=new LinkedList<>();
                     queue.add(node);
+                    queue.add(null);
                     while(!queue.isEmpty()){
                               Node currentNode=queue.poll();
                               if(currentNode==null){
